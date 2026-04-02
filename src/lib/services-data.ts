@@ -18,9 +18,9 @@ export interface ServiceStat {
 export interface ServiceSection {
   type: "overview" | "features" | "process" | "results" | "podcast" | "gallery" | "photo-gallery";
   title: string;
-  subtitle: string;
-  description: string;
-  videoUrl: string;
+  subtitle?: string;
+  description?: string;
+  videoUrl?: string;
   featuredVideoUrl?: string;
   image?: string;
   images?: string[];
