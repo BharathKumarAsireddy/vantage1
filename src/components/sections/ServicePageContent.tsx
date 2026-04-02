@@ -247,10 +247,11 @@ function FeaturesSection({
               >
                 {/* Feature image */}
                 <div className="relative h-52 overflow-hidden">
-                  <img
+                  <Image
                     src={feature.image}
                     alt={feature.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div
                     className="absolute inset-0"
@@ -530,10 +531,11 @@ function GallerySection({
                 className="relative rounded-2xl overflow-hidden h-full min-h-[320px] border group"
                 style={{ borderColor: `${accent}25` }}
               >
-                <img
+                <Image
                   src={images[0]}
                   alt="Podcast studio — main view"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -556,10 +558,11 @@ function GallerySection({
                 className="relative rounded-2xl overflow-hidden h-[220px] border group"
                 style={{ borderColor: `${accent}20` }}
               >
-                <img
+                <Image
                   src={img}
                   alt={`Podcast studio — view ${i + 2}`}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -652,9 +655,11 @@ function PhotoGallerySection({
                 className="relative overflow-hidden rounded-2xl border group mb-4 break-inside-avoid"
                 style={{ borderColor: `${accent}22` }}
               >
-                <img
+                <Image
                   src={img}
                   alt={`${section.title} — photo ${i + 1}`}
+                  width={800}
+                  height={600}
                   className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div
